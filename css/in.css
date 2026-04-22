@@ -1,0 +1,105 @@
+body {
+            background-image: url('/images/Lo1.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .container {
+            width: 700px;
+            height: 500px;
+            margin: 50px auto;
+            position: relative;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo {
+            position: absolute;
+            width: 80px;
+        }
+
+        .logo-left {
+            left: 10px;
+            top: 10px;
+        }
+
+        .logo-right {
+            right: 10px;
+            top: 10px;
+        }
+
+        .logo-center {
+            left: 320px;
+            top: 40px;
+        }
+
+        .chat-area {
+            width: 80%;
+            height: 300px;
+            background: lightgray;
+            margin: 20px auto;
+            padding: 10px;
+            overflow-y: auto;
+            border-radius: 5px;
+            text-align: justify;
+        }
+
+        .input-area {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 70%;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .send-btn {
+            padding: 8px 15px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .send-btn img {
+            width: 20px;
+            vertical-align: middle;
+        }
+
+        .manual-btn {
+            position: absolute;
+            top: 150px;
+            left: 3px;
+            bottom: 90px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .manual-btn img {
+            width: 60px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 50px;
+        }
+
+        .menu-grid p {
+            margin: 0;
+            padding: 0;
+        }

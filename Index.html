@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" 
+    href="./images/Ajo.png">
+    <link rel="stylesheet" href="./css/in.css">
+    <title>ChatBot TeChat</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="/images/LogoB1.png" class="logo logo-left">
+        <img src="/images/logo2.png" class="logo logo-right">
+        <!--<img src="./images/Ajo.png" class="logo logo-center">-->
+        <video autoplay muted loop playsinline width="80" height="80" style="border-radius: 50%; object-fit: cover;" class="logo logo-center" >
+            <source src="https://res.cloudinary.com/dvwiiegqy/video/upload/v1776809858/Ajo1_mehu25.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="header">Instituto Tecnológico de Tláhuac #1</div>
+        <br><br><br><br>
+        <div class="chat-area" id="chat">
+            <p><b>TecChat:</b> ¡Hola! ¿En qué puedo ayudarte? 🤩</p>
+            <div class="menu-grid">
+                <p><b>Tenemos esto en el menú:</b> </p><br>
+                <p><b>1.-</b> Buzón de Género</p>
+                <p><b>2.-</b> Correo</p>
+                <p><b>3.-</b> Calendario</p>
+                <p><b>4.-</b> Vinculación</p>
+                <p><b>5.-</b> Bolsa de trabajo</p>
+                <p><b>6.-</b> Alumnos</p>
+                <p><b>7.-</b> Docentes</p>
+                <p><b>8.-</b> Instituto</p>
+                <p><b>9.-</b> Departamentos</p>
+                <p><b>10.-</b> Admisión</p>
+                <p><b>11.-</b> Oferta Educativa</p>
+                <p><b>12.-</b> PRODEP</p>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" maxlength="70"
+                placeholder="Escribe tu mensaje..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="procesarEntrada()">
+                <img src="/images/EN.png" alt="Enviar">
+            </button>
+        </div>
+
+        <button class="manual-btn" onclick="mostrarManual()">
+            <img src="/images/Man.jpeg" alt="Manual">
+        </button>
+
+    </div>
+
+    <script src="./JavaScript/Func.js">
+function procesarEntrada(){
+    alert("Funciona 😄");
+}
+
+function handleKeyPress(event){
+    if(event.key === "Enter"){
+        procesarEntrada();
+    }
+}
+    </script>
+</body>
+
+</html>
