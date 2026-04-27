@@ -84,8 +84,8 @@ function crearCorreo(nombre, correo) {
 
 // ================= RESPUESTAS PRINCIPALES =================
 const respuestas = {
-"1": () => {
-    return `
+    "1": () => {
+        return `
     <b>TeChat:</b><br><br>
 
     <div style="
@@ -105,7 +105,7 @@ const respuestas = {
 
     </div>
     `;
-},
+    },
     "2": () => {
         abrir_url("PDFS/Calendario 2026.pdf");
         return "<b>TeChat:</b> Aquí tienes el calendario <a href='PDFS/Calendario 2026.pdf' target='_blank'>Calendario</a>";
@@ -116,7 +116,8 @@ const respuestas = {
     },
     "4": () => {
         abrir_url("https://tlahuac.tecnm.mx/BolsaTrabajo/OCC");
-        return "<b>TeChat:</b> Bolsa de trabajo: <a href='https://tlahuac.tecnm.mx/BolsaTrabajo/OCC' target='_blank'>Ver bolsa de trabajo</a>"},
+        return "<b>TeChat:</b> Bolsa de trabajo: <a href='https://tlahuac.tecnm.mx/BolsaTrabajo/OCC' target='_blank'>Ver bolsa de trabajo</a>"
+    },
     "5": () => "<b>TeChat:</b><br>" + Mensaj5,
     "6": () => "<b>TeChat:</b><br>" + Mensaj6,
     "7": () => {
@@ -138,74 +139,75 @@ const respuestas = {
 // ================= SUBMENÚS =================
 const subRespuestas = {
     "12": () => {
-        abrir_url("PDFS/SEGUROS.pdf"); 
-        return "<b>TeChat:</b> Seguro de accidentes: <a href='PDFS/SEGUROS.pdf' target='_blank'>Ver Seguros</a>"; 
+        abrir_url("PDFS/SEGUROS.pdf");
+        return "<b>TeChat:</b> Seguro de accidentes: <a href='PDFS/SEGUROS.pdf' target='_blank'>Ver Seguros</a>";
     },
-    "13": () => { 
-        abrir_url("PDFS/BECAS.pdf"); 
-        return "<b>TeChat:</b> Becas: <a href='PDFS/BECAS.pdf' target='_blank'>Mostrar Becas</a>"; 
+    "13": () => {
+        abrir_url("PDFS/BECAS.pdf");
+        return "<b>TeChat:</b> Becas: <a href='PDFS/BECAS.pdf' target='_blank'>Mostrar Becas</a>";
     },
     "14": () => {
-        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Titulacion"); 
-        return "<b>TeChat:</b> Titulación: <a href='https://tlahuac.tecnm.mx/Departamentos/Titulacion' target='_blank'>Mostrar apartado de Titulación</a>"; 
+        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Titulacion");
+        return "<b>TeChat:</b> Titulación: <a href='https://tlahuac.tecnm.mx/Departamentos/Titulacion' target='_blank'>Mostrar apartado de Titulación</a>";
     },
 
-    "15": () => { 
-        abrir_url("./revista/inddoc.html"); 
-        return "<b>TeChat:</b> Convocatoria <a href='./revista/inddoc.html' target='_blank'>Mostrar revista de convocatorias</a>"; 
+    "15": () => {
+        abrir_url("./revista/inddoc.html");
+        return "<b>TeChat:</b> Convocatoria <a href='./revista/inddoc.html' target='_blank'>Mostrar revista de convocatorias</a>";
     },
-    "16": () => { 
-        abrir_url("https://tlahuac.tecnm.mx/Docentes/Investigacion"); 
+    "16": () => {
+        abrir_url("https://tlahuac.tecnm.mx/Docentes/Investigacion");
         return "Investigación <a href='https://tlahuac.tecnm.mx/Docentes/Investigacion' target='_blank'>Ver apartado investigación</a>";
     },
-    "17": () => { 
-        abrir_url("https://tlahuac.tecnm.mx/Docentes/Tutoria"); 
+    "17": () => {
+        abrir_url("https://tlahuac.tecnm.mx/Docentes/Tutoria");
         return "Tutorías <a href='https://tlahuac.tecnm.mx/Docentes/Tutoria' target='_blank'>Ver apartado de tutorias</a>";
     },
 
-    "18": () => { 
-        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Academica"); 
-        return "Subdirección Académica <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Academica' target='_blank'>Ver apartado de subdireccion academica</a>"; 
+    "18": () => {
+        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Academica");
+        return "Subdirección Académica <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Academica' target='_blank'>Ver apartado de subdireccion academica</a>";
     },
-    "19": () => { 
-        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Administrativa"); 
-        return "Subdirección Administrativa <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Administrativa' target='_blank'>Ver apartado de subdireccion academica</a>"; 
+    "19": () => {
+        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Administrativa");
+        return "Subdirección Administrativa <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_Administrativa' target='_blank'>Ver apartado de subdireccion academica</a>";
     },
-    "20": () => { 
-        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_de_Planeacion_y_Vinculacion"); 
-        return "Planeación <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_de_Planeacion_y_Vinculacion' target='_blank'>Ver apartado de planeación</a>"; 
+    "20": () => {
+        abrir_url("https://tlahuac.tecnm.mx/Departamentos/Subdireccion_de_Planeacion_y_Vinculacion");
+        return "Planeación <a href='https://tlahuac.tecnm.mx/Departamentos/Subdireccion_de_Planeacion_y_Vinculacion' target='_blank'>Ver apartado de planeación</a>";
     },
 
-    "21": () => { 
-        abrir_url("./revista/indArq.html"); 
-        return "Arquitectura"; 
+    "21": () => {
+        abrir_url("./revista/indArq.html");
+        return "Arquitectura";
     },
-    "22": () => { 
-        abrir_url("./revista/indMec.html"); 
-        return "Mecatrónica"; 
+    "22": () => {
+        abrir_url("./revista/indMec.html");
+        return "Mecatrónica";
     },
-    "23": () => { 
-        abrir_url("./revista/indiElec.html"); 
-        return "Electrónica"; 
+    "23": () => {
+        abrir_url("./revista/indiElec.html");
+        return "Electrónica";
     },
-    "24": () => { 
-        abrir_url("./revista/indiAu.html"); 
-        return "Automotrices"; 
+    "24": () => {
+        abrir_url("./revista/indiAu.html");
+        return "Automotrices";
     },
-    "25": () => { 
-        abrir_url("./revista/indSisCom.html"); 
-        return "Sistemas Computacionales"; },
-    "26": () => { 
-        abrir_url("./revista/indiFerr.html"); 
-        return "Ferroviaria"; 
+    "25": () => {
+        abrir_url("./revista/indSisCom.html");
+        return "Sistemas Computacionales";
     },
-    "27": () => { 
-        abrir_url("./revista/indiAdmin.html"); 
-        return "Administración"; 
+    "26": () => {
+        abrir_url("./revista/indiFerr.html");
+        return "Ferroviaria";
     },
-    "28": () => { 
-        abrir_url("./revista/indiConta.html"); 
-        return "Contador"; 
+    "27": () => {
+        abrir_url("./revista/indiAdmin.html");
+        return "Administración";
+    },
+    "28": () => {
+        abrir_url("./revista/indiConta.html");
+        return "Contador";
     }
 };
 
@@ -272,14 +274,14 @@ function procesarEntrada() {
 
     // ================= 🧠 DETECCIÓN INTELIGENTE DE CORREOS =================
     const departamentos = {
-        "direccion": "direccion@tlahuac.tecnm.mx",
-        "sindicato": "sindicato@tlahuac.tecnm.mx",
         "subdireccion academica": "sub.academica@tlahuac.tecnm.mx",
         "ciencias basicas": "c.basicas@tlahuac.tecnm.mx",
         "ciencias de la tierra": "ciencias.tierra@tlahuac.tecnm.mx",
-        "electronica": "electronica@tlahuac.tecnm.mx",
+        "economico administrativas": "eco.admin@tlahuac.tecnm.mx",
         "sistemas": "sis.com@tlahuac.tecnm.mx",
-        "economico administrativas": "eco.admin@tlahuac.tecnm.mx"
+        "electronica": "electronica@tlahuac.tecnm.mx",
+        "direccion": "direccion@tlahuac.tecnm.mx",
+        "sindicato": "sindicato@tlahuac.tecnm.mx"
     };
 
     // Detecta frases como:
@@ -336,4 +338,34 @@ function handleKeyPress(event) {
     if (event.key === "Enter") {
         procesarEntrada();
     }
+}
+
+//Burbujas
+const contenedor=document.getElementById("burbujas-container");
+
+function crearBurbuja(){
+
+    const div = document.createElement("div");
+    div.classList.add("burbujas");
+    div.style.left = `${Math.random()*100}%`;
+    const size = Math.random() * 15 + 10; 
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+    div.style.animationName = "moverArriba";
+    div.style.animationDuration = `${Math.random() * 3 + 2}s`
+    contenedor.appendChild(div);
+
+    div.addEventListener("animationend", () => {
+
+        div.remove();
+
+    });
+
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+
+        setInterval(crearBurbuja, 300);
+
+});
 }
