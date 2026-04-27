@@ -1,105 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
 body {
-            background-image: url('../images/Lo1.jpeg');
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            color: black;
-        }
+    background-image: url('../images/Lo1.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: black;
+    overflow-x: hidden;
+}
 
-        .container {
-            width: 700px;
-            height: 500px;
-            margin: 50px auto;
-            position: relative;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+.container {
+    width: 700px;
+    height: 500px;
+    margin: 125px auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-        .header {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
+.pres {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 30px;
+    top: 125px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
 
-        .logo {
-            position: absolute;
-            width: 80px;
-        }
+.header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .logo-left {
-            left: 10px;
-            top: 10px;
-        }
+.logo {
+    position: absolute;
+    width: 80px;
+}
 
-        .logo-right {
-            right: 10px;
-            top: 10px;
-        }
+.logo-left {
+    left: 10px;
+    top: 10px;
+}
 
-        .logo-center {
-            left: 320px;
-            top: 40px;
-        }
+.logo-right {
+    right: 10px;
+    top: 10px;
+}
 
-        .chat-area {
-            width: 80%;
-            height: 300px;
-            background: lightgray;
-            margin: 20px auto;
-            padding: 10px;
-            overflow-y: auto;
-            border-radius: 5px;
-            text-align: justify;
-        }
+.logo-center {
+    left: 320px;
+    top: 40px;
+}
 
-        .input-area {
-            text-align: center;
-            margin-top: 10px;
-        }
+.chat-area {
+    width: 80%;
+    height: 300px;
+    background: lightgray;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 5px;
+    text-align: justify;
+}
 
-        input {
-            width: 70%;
-            padding: 8px;
-            font-size: 14px;
-        }
+.input-area {
+    text-align: center;
+    margin-top: 10px;
+}
 
-        .send-btn {
-            padding: 8px 15px;
-            background: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+input {
+    width: 70%;
+    padding: 8px;
+    font-size: 14px;
+}
 
-        .send-btn img {
-            width: 20px;
-            vertical-align: middle;
-        }
+.send-btn {
+    padding: 8px 15px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        .manual-btn {
-            position: absolute;
-            top: 150px;
-            left: 3px;
-            bottom: 90px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+.send-btn img {
+    width: 20px;
+    vertical-align: middle;
+}
 
-        .manual-btn img {
-            width: 60px;
-        }
+.manual-btn {
+    position: absolute;
+    top: 150px;
+    left: 3px;
+    bottom: 90px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px 50px;
-        }
+.manual-btn img {
+    width: 60px;
+}
 
-        .menu-grid p {
-            margin: 0;
-            padding: 0;
-        }
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 50px;
+}
+
+.menu-grid p {
+    margin: 0;
+    padding: 0;
+}
+
+#burbujas-container{
+
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+
+}
+
+.burbujas{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 255, 247);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+@keyframes moverArriba {
+    
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+}
