@@ -341,7 +341,7 @@ function handleKeyPress(event) {
 }
 
 //Burbujas
-const contenedor=document.getElementById("burbujas-container");
+let contenedor;
 
 function crearBurbuja(){
 
@@ -352,20 +352,21 @@ function crearBurbuja(){
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.animationName = "moverArriba";
-    div.style.animationDuration = `${Math.random() * 3 + 2}s`
+    div.style.animationDuration = `${Math.random() * 3 + 2}s`;
+
     contenedor.appendChild(div);
 
     div.addEventListener("animationend", () => {
-
         div.remove();
-
     });
-
 }
 
 window.addEventListener("DOMContentLoaded", () => {
 
-        setInterval(crearBurbuja, 300);
+    contenedor = document.getElementById("burbujas-container");
 
+    setInterval(crearBurbuja, 300);
+
+});
 });
 }
