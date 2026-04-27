@@ -368,5 +368,3 @@ window.addEventListener("DOMContentLoaded", () => {
     setInterval(crearBurbuja, 300);
 
 });
-});
-}
