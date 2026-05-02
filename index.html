@@ -11,74 +11,122 @@
 
 <body>
     <div id="burbujas-container"></div>
-        <div class="pres">
-            <img src="./images/Escu.png" width="80" height="80">
-            <h2>Instituto Tecnológico <br> de Tláhuac #1</h2>
-            <img src="./images/Ajo.png" width="80" height="80" style="position: absolute; left: 10px; top: 430px;">
-            <p style="position: absolute; left: 150px; top: 450px;"><b>TeChat</b></p>
-            <p style="position: absolute; left: 120px; top: 470px;">Asistente virtual</p>
-        </div>
-
-
-        <div class="container">
-            <img src="./images/LogoB1.png" class="logo logo-left">
-            <img src="./images/logo2.png" class="logo logo-right">
-            <!--<img src="./images/Ajo.png" class="logo logo-center">-->
-            <video autoplay muted loop playsinline width="80" height="80" style="border-radius: 50%; object-fit: cover;"
-                class="logo logo-center">
-                <source src="https://res.cloudinary.com/dvwiiegqy/video/upload/v1776809858/Ajo1_mehu25.mp4"
-                    type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
-            <div class="header">Instituto Tecnológico de Tláhuac #1</div>
-            <br><br><br><br>
-            <div class="chat-area" id="chat">
-                <p><b>TeChat:</b> ¡Hola! ¿En qué puedo ayudarte? 🤩</p>
-                <div class="menu-grid">
-                    <p><b>Tenemos esto en el menú:</b> </p><br>
-                    <p><b>1.-</b> Correo</p>
-                    <p><b>2.-</b> Calendario</p>
-                    <p><b>3.-</b> Vinculación</p>
-                    <p><b>4.-</b> Bolsa de trabajo</p>
-                    <p><b>5.-</b> Alumnos</p>
-                    <p><b>6.-</b> Docentes</p>
-                    <p><b>7.-</b> Instituto</p>
-                    <p><b>8.-</b> Departamentos</p>
-                    <p><b>9.-</b> Admisión</p>
-                    <p><b>10.-</b> Oferta Educativa</p>
-                    <p><b>11.-</b> PRODEP</p>
-                </div>
-            </div>
-            <p></p>
-
-            <div class="input-area">
-                <input type="text" id="userInput" maxlength="70" placeholder="Escribe tu mensaje..."
-                    onkeypress="handleKeyPress(event)">
-                <button class="send-btn" onclick="procesarEntrada()">
-                    <img src="./images/EN.png" alt="Enviar">
-                </button>
-            </div>
-
-            <button class="manual-btn" onclick="mostrarManual()">
+    <div class="pres">
+        <img src="./images/Escu.png" width="120" height="120">
+        <h2>Instituto Tecnológico <br> de Tláhuac #1</h2>
+        <img src="./images/Ajo.png" width="120" height="120" style="position: absolute; left: 0px; top: 500px;">
+        <p style="position: absolute; left: 180px; top: 540px;"><b>TeChat</b></p>
+        <p style="position: absolute; left: 150px; top: 555px;">Asistente virtual</p>
+        <!--<button class="manual-btn" onclick="mostrarManual()">
                 <img src="./images/Man.jpeg" alt="Manual">
+            </button>-->
+    </div>
+
+
+    <div class="container">
+        <img src="./images/LogoB1.png" class="logo logo-left">
+        <img src="./images/logo2.png" class="logo logo-right">
+        <!--<img src="./images/Ajo.png" class="logo logo-center">-->
+        <video autoplay muted loop playsinline height="100" style="border-radius: 100%; object-fit: cover;"
+            class="logo logo-center">
+            <source src="https://res.cloudinary.com/dvwiiegqy/video/upload/v1776809858/Ajo1_mehu25.mp4"
+                type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="header">Instituto Tecnológico de Tláhuac #1</div>
+        <br><br><br><br>
+        <div class="chat-area" id="chat">
+            <p><b>TeChat:</b> ¡Hola! ¿En qué puedo ayudarte? 🤩</p>
+            <div class="menu-grid">
+                <p><b>Tenemos esto en el menú:</b> </p><br>
+                <p><b>1.-</b> Correo</p>
+                <p><b>2.-</b> Calendario</p>
+                <p><b>3.-</b> Vinculación</p>
+                <p><b>4.-</b> Bolsa de trabajo</p>
+                <p><b>5.-</b> Alumnos</p>
+                <p><b>6.-</b> Docentes</p>
+                <p><b>7.-</b> Instituto</p>
+                <p><b>8.-</b> Departamentos</p>
+                <p><b>9.-</b> Admisión</p>
+                <p><b>10.-</b> Oferta Educativa</p>
+                <p><b>11.-</b> PRODEP</p>
+            </div>
+        </div><br>
+        <p></p>
+
+        <div class="input-area">
+            <input type="text" id="userInput" maxlength="70" placeholder="Escribe tu mensaje..."
+                onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="procesarEntrada()">
+                <img src="./images/EN.png" alt="Enviar">
+            </button>
+        </div>
+    </div>
+
+    <div class="access">
+
+        <div class="access-header">
+            <img src="./images/Lumalee.png">
+            <div>
+                <h2>Accesos rápidos</h2>
+                <p>Explora los servicios del instituto</p>
+            </div>
+        </div>
+        <div class="access-grid">
+
+            <button class="card">
+                <img src="./images/Correo.png" class="icon" width="80" height="70">
+                <h4>Correo</h4>
+                <p>Accede al correo institucional</p>
+            </button>
+
+            <button class="card">
+                <img src="./images/Calendario.png" class="icon" width="80" height="70">
+                <h4>Calendario</h4>
+                <p>Consulta el calendario</p>
+            </button>
+
+            <button class="card">
+                <img src="./images/Sapo.png" class="icon" width="80" height="70">
+                <h4>Sapei</h4>
+                <p>Accede a tu cuenta de Sapei</p>
+            </button>
+
+            <button class="card">
+                <img src="./images/Instituto.png" class="icon" width="80" height="70">
+                <h4>Instituto</h4>
+                <p>Conoce más sobre el instituto</p>
+            </button>
+
+            <button  class="card">
+                <img src="./images/BolT.png" class="icon" width="80" height="70">
+                <h4>Bolsa de trabajo</h4>
+                <p>Oportunidades laborales</p>
+            </button>
+
+            <button class="card">
+                <img src="./images/ServEsc.png" class="icon" width="80" height="70">
+                <h4>Serv. Escolares</h4>
+                <p>Pag. Servicios Escolares</p>
             </button>
 
         </div>
 
-        <script src="./JavaScript/Func.js">
-            function procesarEntrada() {
-                alert("Funciona 😄");
-            }
 
-            function handleKeyPress(event) {
-                if (event.key === "Enter") {
-                    procesarEntrada();
-                }
+    </div>
+
+    <script src="./JavaScript/Func.js">
+        function procesarEntrada() {
+            alert("Funciona 😄");
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                procesarEntrada();
             }
-        </script>
-    
+        }
+    </script>
+
 </body>
-
-</html>
 
 </html>
