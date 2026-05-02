@@ -15,9 +15,14 @@ body {
 
 .container {
     width: 700px;
-    height: 500px;
-    margin: 125px auto;
+    height: 600px;
+    margin: 75px auto;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 15px;
@@ -26,10 +31,10 @@ body {
 
 .pres {
     width: 300px;
-    height: 500px;
+    height: 600px;
     position: absolute;
     left: 30px;
-    top: 125px;
+    top: 75px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 15px;
@@ -37,9 +42,58 @@ body {
     text-align: center;
 }
 
+.access {
+
+    font-family: "Times New Roman", Times, serif;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    right: 30px;
+    top: 75px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.access-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.access-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 .header {
     text-align: center;
-    font-size: 18px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -49,49 +103,56 @@ body {
 }
 
 .logo-left {
-    left: 10px;
-    top: 10px;
+    left: 40px;
+    top: 70px;
 }
 
 .logo-right {
-    right: 10px;
-    top: 10px;
+    right: 40px;
+    top: 70px;
 }
 
 .logo-center {
     left: 320px;
-    top: 40px;
+    top: 80px;
 }
 
 .chat-area {
-    width: 80%;
-    height: 300px;
+    width: 90%;
+    height: 280px; 
     background: lightgray;
-    margin: 20px auto;
+    margin: 75px auto 0px auto;
     padding: 10px;
     overflow-y: auto;
     border-radius: 5px;
     text-align: justify;
+    font-size: 16px;
+    
 }
 
 .input-area {
-    text-align: center;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
 }
 
 input {
-    width: 70%;
-    padding: 8px;
-    font-size: 14px;
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 .send-btn {
-    padding: 8px 15px;
+    padding: 10px 18px;
     background: blue;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .send-btn img {
@@ -116,7 +177,7 @@ input {
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px 50px;
+    gap: 15px 200px;
 }
 
 .menu-grid p {
@@ -130,7 +191,7 @@ input {
     inset: 0;
     overflow: hidden;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 0;
 
 }
 
