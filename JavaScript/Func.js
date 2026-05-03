@@ -179,35 +179,35 @@ const subRespuestas = {
 
     "21": () => {
         abrir_url("./revista/indArq.html");
-        return "Arquitectura";
+        return "Revista de la carrera de Arquitectura <a href='./revista/indArq.html' target='_blank'>Revista arquitectura</a>";
     },
     "22": () => {
         abrir_url("./revista/indMec.html");
-        return "Mecatrónica";
+        return "Revista de la carrera de Mecatronica <a href='./revista/indMec.html' target='_blank'>Revista mecatronica</a>";
     },
     "23": () => {
         abrir_url("./revista/indiElec.html");
-        return "Electrónica";
+        return "Revista de la carrera de Electrónica <a href='./revista/indiElec.html' target='_blank'>Revista electrónica</a>";
     },
     "24": () => {
         abrir_url("./revista/indiAu.html");
-        return "Automotrices";
+        return "Revista de la carrera de Automotrices <a href='./revista/indiAu.html' target='_blank'>Revista automotrices</a>";
     },
     "25": () => {
         abrir_url("./revista/indSisCom.html");
-        return "Sistemas Computacionales";
+        return "Revista de la carrera de Sistemas Computacionales <a href='./revista/indSisCom.html' target='_blank'>Revista sistemas computacionales</a>";
     },
     "26": () => {
         abrir_url("./revista/indiFerr.html");
-        return "Ferroviaria";
+        return "Revista de la carrera de Ferroviaria <a href='./revista/indiFerr.html' target='_blank'>Revista ferroviaria</a>";
     },
     "27": () => {
         abrir_url("./revista/indiAdmin.html");
-        return "Administración";
+        return "Revista de la carrera de Administración <a href='./revista/indiAdmin.html' target='_blank'>Revista administración</a>";
     },
     "28": () => {
         abrir_url("./revista/indiConta.html");
-        return "Contador";
+        return "Revista de la carrera de Contador Publico <a href='./revista/indiConta.html' target='_blank'>Revista contador publico</a>";
     }
 };
 
@@ -272,8 +272,20 @@ function procesarEntrada() {
 
     let respuesta = "";
 
-    // ================= 🧠 DETECCIÓN INTELIGENTE DE CORREOS =================
+    // ================= DETECCIÓN INTELIGENTE DE CORREOS =================
     const departamentos = {
+        "subdireccion academica": "sub.academica@tlahuac.tecnm.mx",
+        "ciencias basicas": "c.basicas@tlahuac.tecnm.mx",
+        "ciencias de la tierra": "ciencias.tierra@tlahuac.tecnm.mx",
+        "economico administrativas": "eco.admin@tlahuac.tecnm.mx",
+        "sistemas": "sis.com@tlahuac.tecnm.mx",
+        "electronica": "electronica@tlahuac.tecnm.mx",
+        "direccion": "direccion@tlahuac.tecnm.mx",
+        "sindicato": "sindicato@tlahuac.tecnm.mx"
+    };
+
+    // ================= DETECCIÓN INTELIGENTE DE REVISTAS =================
+    const revistas = {
         "subdireccion academica": "sub.academica@tlahuac.tecnm.mx",
         "ciencias basicas": "c.basicas@tlahuac.tecnm.mx",
         "ciencias de la tierra": "ciencias.tierra@tlahuac.tecnm.mx",
@@ -301,6 +313,22 @@ function procesarEntrada() {
         }
     }
 
+    // "revistas"
+    if (input.includes("correo")) {
+        for (let depto in departamentos) {
+            if (input.includes(depto)) {
+                respuesta = `
+                <b>TeChat:</b><br><br>
+                ${crearCorreo(
+                    depto.charAt(0).toUpperCase() + depto.slice(1),
+                    departamentos[depto]
+                )}
+                `;
+                break;
+            }
+        }
+    }
+
     // ================= 🔢 PRIORIDAD: NÚMEROS =================
     if (respuesta === "") {
         if (respuestas[input]) {
@@ -310,7 +338,6 @@ function procesarEntrada() {
         }
     }
 
-    // ================= 🔑 PALABRAS CLAVE =================
     if (respuesta === "") {
         for (let key in palabrasClave) {
             if (input.includes(key)) {
@@ -320,13 +347,12 @@ function procesarEntrada() {
         }
     }
 
-    // ================= ❌ DEFAULT =================
     if (respuesta === "") {
         respuesta = "<b>TeChat:</b> No entiendo esa opción";
     }
 
-    // ================= 💬 MOSTRAR =================
-    chatBox.innerHTML += `<p><b>Tú:</b> ${input}</p>`;
+   
+    chatBox.innerHTML += `<br><p><b>Tú:</b> ${input}</p><br>`;
     chatBox.innerHTML += `<p>${respuesta}</p>`;
     chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -348,11 +374,11 @@ function crearBurbuja(){
     const div = document.createElement("div");
     div.classList.add("burbujas");
     div.style.left = `${Math.random()*100}%`;
-    const size = Math.random() * 15 + 10; 
+    const size = Math.random() * 30 + 25; 
     div.style.width = `${size}px`;
     div.style.height = `${size}px`;
     div.style.animationName = "moverArriba";
-    div.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    div.style.animationDuration = `${Math.random() * 5 + 4}s`;
 
     contenedor.appendChild(div);
 
@@ -365,6 +391,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     contenedor = document.getElementById("burbujas-container");
 
-    setInterval(crearBurbuja, 300);
+    setInterval(crearBurbuja, 200);
 
 });
